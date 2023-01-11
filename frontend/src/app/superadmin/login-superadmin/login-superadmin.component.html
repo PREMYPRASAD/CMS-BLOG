@@ -1,0 +1,41 @@
+<div class="container">
+    <mat-card style="font-size: 15px" class="example-card">
+      <form
+        class="example-form"
+        #f="ngForm"
+        (ngSubmit)="f.form.valid && superadminlogin()"
+      >
+        <h4 class="heading" style="font-size: 30px">Admin Login</h4>
+        <div class="head">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email id</mat-label>
+            <input
+              [(ngModel)]="login.email"
+              name="email"
+              matInput
+              placeholder="123@abc"
+            />
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input
+              [(ngModel)]="login.password"
+              name="password"
+              matInput
+              [type]="hide ? 'password' : 'text'"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+          <button mat-raised-button class="button">Sign-in</button>
+        </div>
+      </form>
+    </mat-card>
+  </div>

@@ -1,0 +1,46 @@
+
+  .heading{
+    padding: 5%;
+  }
+  .button{
+  background-color: rgb(221, 158, 74);
+  }
+  /* .button{
+    color: rgb(139, 139, 224);
+  } */
+  .head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  [class*='example-card'] {
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+     margin-top: 16%;
+    width: 70%;
+    padding: 7% 1% 7% 1%;
+  }
+    [class*='example-full-width'] {
+      width: 100%;
+    }
+    @media  (min-width: 768px){
+      .example-full-width {
+        width: 60%;
+      }
+      .example-card{
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+         margin-top: 10%;
+        width: 40%;
+        padding: 7% 1% 7% 1%;
+        margin-bottom: 70px;
+      }
+    }
+    
+    
+    td {
+      padding-right: 8px;
+    }
+    
+    
